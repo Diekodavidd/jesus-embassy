@@ -1,5 +1,5 @@
 import React from 'react';
-import './churchFooterSection.css';
+import './ChurchFooterSection.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Facebook, Twitter, Instagram, Youtube } from 'react-bootstrap-icons';
 import { motion } from 'framer-motion';
