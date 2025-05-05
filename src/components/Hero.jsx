@@ -5,7 +5,7 @@ import das from '../assets/hero.jpg'
 
 const HeroComponent = () => {
   const heroStyle = {
-    backgroundImage: {das},
+    backgroundImage:  `url(${das})`,
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
