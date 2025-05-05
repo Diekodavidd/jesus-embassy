@@ -1,5 +1,5 @@
 import React from 'react';
-import './churchEventPage.css';
+import './ChurchEventPage.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Calendar } from 'react-bootstrap-icons';
 import { motion } from 'framer-motion';
