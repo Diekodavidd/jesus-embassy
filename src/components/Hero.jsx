@@ -1,10 +1,11 @@
 import React from 'react';
 import './Hero.css'; // Your custom styles
 import { motion } from 'framer-motion';
+import das from '../assets/hero.jpg'
 
 const HeroComponent = () => {
   const heroStyle = {
-    backgroundImage: "url('src/assets/hero.jpg')",
+    backgroundImage: {das},
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
