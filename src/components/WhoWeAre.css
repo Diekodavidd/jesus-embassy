@@ -1,0 +1,204 @@
+.who-we-are-section {
+    padding: 4rem 1rem;
+    background: #fdfcf9;
+    font-family: 'Georgia', serif;
+  }
+  
+  .who-banner {
+    background: linear-gradient(90deg, #392b70, #d89b54);
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    width: 96%;
+    justify-self: center;
+  }
+  
+  .who-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .who-banner p {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  
+  .verse {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: block;
+    margin-top: 1rem;
+    color: #eee;
+  }
+  
+  .who-cards {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 47%;
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-top {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .card-topp {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, #d89b54, #7c4dff);
+  }
+  
+  .icon {
+    font-size: 60px;
+    color: white;
+  }
+  .card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-topp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-bottom {
+    padding: 2rem;
+    text-align: left;
+    background-color: #fff;
+  }
+  
+  .card-bottom h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-bottom span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 768px) {
+    .who-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+
+   
+  
+  
+  
+  
+  
+  
+  
+  .verse {
+    font-weight: 600;
+    color: #222;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .verse::before,
+  .verse::after {
+    content: '✦';
+    color: #c19432;
+    margin: 0 0.5rem;
+  }
+/* Base section styles */
+.who-we-are-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, #fdfaf5, #f8efe3);
+  padding: 4rem 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Floating Verse Background Container */
+.floating-verses {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.who-banner {
+  position: relative;
+  z-index: 2; /* Ensure main text appears on top */
+}
+
+
+.floating-verse {
+  position: absolute;
+  background: linear-gradient(90deg, #33285f, #d89b54);
+   color: rgb(255, 255, 255); /* Increase base visibility */
+  font-size: 1.8rem;
+  font-weight: 600;
+  animation: floatVerse 20s linear infinite;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Verse Animation */
+@keyframes floatVerse {
+  0% {
+    transform: translateY(100%) rotate(0deg);
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(-200%) rotate(3deg);
+    opacity: 0;
+  }
+}
+
+  

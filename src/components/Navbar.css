@@ -1,0 +1,185 @@
+.custom-navbar {
+
+  padding: 1.5rem 2rem 0.5rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-section {
+  
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #c4912e;
+}
+
+.nav-logo-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.login-btn {
+  background-color: #c4912e;
+  color: white !important;
+  padding: 0.45rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #a6791d;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+}
+.active-link {
+  color: #c19432;
+  font-weight: bold;
+}
+
+
+@media (max-width: 991px) {
+  .navbar-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav-section {
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-logo-wrapper {
+    position: static;
+    transform: none;
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-inner {
+    display: none;
+  }
+
+  .navbar-inner.open {
+    display: flex;
+  }
+} 
+
+
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  transition: max-height 0.3s ease;
+}
+.nav-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+.nav-item a:hover {
+  color: #c19432;
+}
+
+
+
+
+.login-btn:hover {
+  background-color: #af8125;
+}
+
+/* Hamburger menu for small screens */
+.hamburger {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-inner {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-inner.open {
+    max-height: 500px;
+    padding-top: 1rem;
+  }
+
+  .nav-section {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,213 @@
+/* churchEventPage.css
+
+
+  .event-block {
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+  }
+  
+  .event-header {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .calendar-icon {
+    color: #e3a852;
+    font-size: 1.2rem;
+  }
+  
+  .event-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .event-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .event-date {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+ 
+  
+  .partner-block {
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+  }
+  
+  .partner-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .partner-text {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .give-button {
+    background-color: #c89b4f;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .give-button:hover {
+    background-color: #b5893f;
+  }
+  
+
+  
+  
+  @media (max-width: 768px) {
+    .sermon-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .pastor-img {
+      margin-bottom: 1rem;
+    }
+  }
+   */
+
+   .church-event-wrapper {
+    background: linear-gradient(to bottom, #f9f8f4, #fffdf7);
+    font-family: 'Segoe UI', sans-serif;
+    color: #1a1a1a;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .glowing-border {
+    border: 1px solid rgba(200, 155, 79, 0.5);
+    box-shadow: 0 0 20px rgba(200, 155, 79, 0.15), inset 0 0 15px rgba(255, 215, 0, 0.08);
+    border-radius: 12px;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .glowing-border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.25), inset 0 0 20px rgba(255, 215, 0, 0.15);
+  }
+  
+  .event-header {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #c89b4f;
+    letter-spacing: 1px;
+  }
+  
+  .calendar-icon {
+    color: #c89b4f;
+    font-size: 1.4rem;
+    animation: iconGlow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes iconGlow {
+    0% { filter: drop-shadow(0 0 3px #c89b4f); }
+    100% { filter: drop-shadow(0 0 8px #c89b4f); }
+  }
+  
+  .event-label {
+    text-transform: uppercase;
+  }
+  
+  .event-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .event-date {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #777;
+  }
+  
+  .scripture-tag {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Partner Section */
+  .partner-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+  
+  .partner-text {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .give-button {
+    background-color: #c89b4f;
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .give-button:hover {
+    background-color: #b5893f;
+  }
+
+  .countdown-wrapper {
+    margin: 1rem 0;
+    background-color: #fefaf3;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #c89b4f;
+    display: inline-block;
+    animation: fadeIn 1s ease;
+  }
+  
+  .countdown-title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #c89b4f;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .countdown-values {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    letter-spacing: 2px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .glowing-border {
+      margin-bottom: 1.5rem;
+    }
+  }
+  

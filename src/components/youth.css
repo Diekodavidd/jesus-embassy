@@ -1,0 +1,63 @@
+.kax {
+  gap: 2rem;
+  margin-top: 30px;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #d89b54, #7c4dff);
+}
+
+.ministry-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  width: 30%;
+  height: 260px;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 95% 100%, 0 100%);
+  transition: all 0.4s ease;
+}
+
+.special-card {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 92%, 0 100%);
+}
+
+.ministry-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffe58a;
+  filter: drop-shadow(0 0 4px #ffe58a);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    filter: drop-shadow(0 0 4px #ffe58a);
+  }
+  to {
+    filter: drop-shadow(0 0 12px #ffe58a);
+  }
+}
+
+.ministry-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.explore {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  animation: pulseText 2s infinite ease-in-out;
+}
+
+@keyframes pulseText {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}

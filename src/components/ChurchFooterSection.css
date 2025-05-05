@@ -1,0 +1,105 @@
+.footer-section {
+    background-color: #0c1b2a;
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* CTA */
+  .cta-container {
+    margin-bottom: 60px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(194, 164, 91, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(194, 164, 91, 0.2);
+  }
+  
+  .cta-title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .cta-text {
+    font-size: 1rem;
+    color: #d8d8d8;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-button {
+    background-color: #c2a45b;
+    border: none;
+    padding: 12px 36px;
+    font-size: 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #b5964f;
+    transform: translateY(-2px);
+  }
+  
+  /* Footer Info */
+  .footer-info {
+    background-color: #0a1723;
+    padding: 50px 0 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+  
+  .footer-top h4,
+  .footer-top h5 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .footer-top p {
+    color: #cccccc;
+    font-size: 15px;
+  }
+  
+  .footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 30px 0 20px;
+  }
+  .max{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Social */
+  .footer-social .social-icon {
+    width: 20%;
+    font-size: 26px;
+    color: #ffffff;
+    margin: 0 12px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .footer-social .social-icon:hover {
+    color: #d7a640;
+    transform: scale(1.1);
+  }
+  
+  /* Copyright */
+  .footer-copy {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+  }
+  
