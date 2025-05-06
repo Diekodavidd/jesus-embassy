@@ -12,7 +12,7 @@ const HeroComponent = () => {
   };
   
   return (
-    <div style={heroStyle} className="hero-container">
+    <div style={{background:`url(${das})`, backgroundPosition:"center center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}} className="hero-container">
       <div className="hero-overlay">
         <motion.div
         id='home'

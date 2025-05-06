@@ -81,11 +81,3 @@ const NavbarComponent = () => {
 export default NavbarComponent;
 
 
-{/* <section id="home">...</section>
-<section id="about">...</section>
-<section id="sermons">...</section>
-<section id="ministries">...</section>
-<section id="events">...</section>
-<section id="give">...</section>
-<section id="contact">...</section>
-<section id="login">...</section> */}

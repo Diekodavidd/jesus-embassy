@@ -3,6 +3,7 @@ import './ChurchEventPage.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Calendar } from 'react-bootstrap-icons';
 import { motion } from 'framer-motion';
+// import Countdown from './Countdown';
 import Countdown from 'react-countdown';
 
 const ChurchEventPage = () => {
@@ -39,6 +40,7 @@ const ChurchEventPage = () => {
                     </div>
                   )}
                 />
+                {/* <Countdown targetDate="2024-06-15T18:00:00" /> */}
               </div>
 
               <p className="scripture-tag">“When the Spirit comes, there is liberty.” – 2 Cor. 3:17</p>
