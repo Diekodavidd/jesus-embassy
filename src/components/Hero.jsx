@@ -5,7 +5,7 @@ import das from '../assets/video.mp4'
 
 const HeroComponent = () => {
   const heroStyle = {
-    backgroundImage:  `url(${das})`,
+    backgroundImage:  `url(https://res.cloudinary.com/ddemtumir/video/upload/v1746650844/video_wdfjue.mp4)`,
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -13,10 +13,11 @@ const HeroComponent = () => {
   
   return (
     <div className="hero-container">
-      <video autoPlay muted loop playsInline className="hero-video">
-    <source src={das} type="video/mp4" />
+  <video autoPlay muted loop playsInline className="hero-video">
+    <source src="https://res.cloudinary.com/ddemtumir/video/upload/v1746650844/video_wdfjue.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+
       <div className="hero-overlay">
         <motion.div
         id='home'
