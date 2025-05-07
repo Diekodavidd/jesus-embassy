@@ -27,31 +27,65 @@ const ChurchFooterSection = () => {
       {/* Footer Info */}
       <footer className="footer-info">
         <Container>
-          <Row className="footer-top text-center text-md-start">
-            <Col md={4} className="footer-brand mb-4 mb-md-0">
-              <h4>Jesus Embassy</h4>
-              <p>1234 Example Street<br />City, State 12245</p>
-            </Col>
-            <Col md={4} className="footer-contact mb-4 mb-md-0">
-              <h5>Call Us</h5>
-              <p>(123) 456-7930</p>
-            </Col>
-            <Col md={4} className="footer-email">
-              <h5>Email</h5>
-              <p>info@jesusembassy.org</p>
-            </Col>
-          </Row>
+        <Row className="footer-main gx-5 gy-4 text-center text-md-start">
+  {/* 1. Church Info */}
+  <Col md={3}>
+    <h5>Jesus Embassy</h5>
+    <p>1234 Example Street<br />City, State 12245</p>
+  </Col>
 
-          <hr className="footer-divider" />
+  {/* 2. Service Times */}
+  <Col md={3}>
+    <h5>Service Times</h5>
+    <p>Sundays: 9:00 AM & 11:00 AM</p>
+    <p>Wednesdays: 7:00 PM</p>
+    <p>Fridays: 10:00 PM</p>
+  </Col>
 
-          <div className="max footer-social justify-content-center mt-4">
-            <a href="#" aria-label="Facebook"><Facebook className="social-icon" /></a>
-            <a href="#" aria-label="Twitter"><Twitter className="social-icon" /></a>
-            <a href="#" aria-label="Instagram"><Instagram className="social-icon" /></a>
-            <a href="#" aria-label="Youtube"><Youtube className="social-icon" /></a>
-          </div>
+  {/* 3. Contact Info */}
+  <Col md={3}>
+    <h5>Contact</h5>
+    <p>Call: (123) 456-7930</p>
+    <p>Email: info@jesusembassy.org</p>
+  </Col>
 
-          <p className="footer-copy mt-4 text-center">&copy; 2025 Jesus Embassy. All rights reserved.</p>
+  {/* 4. Prayer Form */}
+  <Col md={3}>
+    <h5>Prayer Request</h5>
+    <form>
+      <input type="text" placeholder="Name" className="footer-input" />
+      <textarea placeholder="Prayer" rows="2" className="footer-input" />
+      <Button type="submit" className="footer-submit mt-2">Send</Button>
+    </form>
+  </Col>
+</Row>
+
+<hr className="footer-divider" />
+
+{/* 5. Map and Socials Row */}
+<Row className="align-items-center text-center text-md-start mt-4">
+  <Col md={6}>
+    <iframe
+      title="church-location"
+      src="https://www.google.com/maps/embed?pb=..."
+      width="100%"
+      height="150"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      className="rounded shadow-sm"
+    ></iframe>
+  </Col>
+  <Col md={6} className="footer-social text-md-end mt-3 mt-md-0">
+    <a href="#"><Facebook className="social-icon" /></a>
+    <a href="#"><Twitter className="social-icon" /></a>
+    <a href="#"><Instagram className="social-icon" /></a>
+    <a href="#"><Youtube className="social-icon" /></a>
+  </Col>
+</Row>
+
+<p className="footer-copy mt-4 text-center">&copy; 2025 Jesus Embassy. All rights reserved.</p>
+
         </Container>
       </footer>
     </div>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Custom CSS
 import logo from '../assets/rccglogo.webp';
+import logo1 from '../assets/rccglogo.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 
@@ -14,9 +15,13 @@ const NavbarComponent = () => {
 
   return (
     <nav className="custom-navbar">
-      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
-      </button>
+      <button
+  className={`hamburger ${menuOpen ? 'open' : ''}`}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? '✕' : '☰'}
+</button>
+
 
       <AnimatePresence>
   
@@ -46,9 +51,10 @@ const NavbarComponent = () => {
   activeClass="active-link" className="nav-item">Ministries</Link>
         
 
-        <div >
-          <img style={{marginTop:"-15px"}} src={logo} alt="Logo" className="nav-logo" />
-        </div>
+        <div className="nav-logo-wrapper d-none d-md-block">
+  <img src={logo1} alt="Logo" className="nav-logo" />
+</div>
+
 
         
 <Link to="events" smooth={true} 

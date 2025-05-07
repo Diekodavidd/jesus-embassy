@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css'; // Your custom styles
 import { motion } from 'framer-motion';
-import das from '../assets/hero.jpg'
+import das from '../assets/video.mp4'
 
 const HeroComponent = () => {
   const heroStyle = {
@@ -12,7 +12,11 @@ const HeroComponent = () => {
   };
   
   return (
-    <div style={{background:`url(${das})`, backgroundPosition:"center center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}} className="hero-container">
+    <div className="hero-container">
+      <video autoPlay muted loop playsInline className="hero-video">
+    <source src={das} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
       <div className="hero-overlay">
         <motion.div
         id='home'
@@ -26,14 +30,14 @@ const HeroComponent = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Welcome to Jesus Embassy
+            Encounter God. Embrace Purpose. Empower the World.
           </motion.h1>
           <motion.h5
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            RCCG Région 42 Headquarters
+            Welcome to Jesus Embassy – RCCG Region 42 HQ
           </motion.h5>
           <motion.p
             initial={{ opacity: 0 }}
@@ -48,8 +52,9 @@ const HeroComponent = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
           >
-            <button className="btn btn-primary" id='cax'>Plan Your Visit</button>
-            <button className="btn btn-secondary" id='haz'>Watch Latest Sermon</button>
+            <button className="btn btn-primary" id='cax'>Visit Us This Sunday</button>
+            <button className="btn btn-secondary" id='haz'>Experience the Word</button>
+            <button className="btn btn-dark">Join a Small Group</button>
           </motion.div>
         </motion.div>
       </div>
@@ -59,38 +64,3 @@ const HeroComponent = () => {
 
 export default HeroComponent;
 
-
-
-// import React from 'react';
-// import './Hero.css';
-// import avatar from '../assets/rccglogo.webp'; // Replace with actual path
-// import { FaQuoteLeft } from 'react-icons/fa';
-
-// const HeroSection = () => {
-//   return (
-//     <section className="hero-section">
-//       <div className="hero-content container">
-//         <div className="hero-text">
-//           <h1>Worship With Us</h1>
-//           <p>Experience spirit-filled sermons and an amazing community built on faith, love, and hope.</p>
-//           <button className="join-btn">Join Us</button>
-//         </div>
-
-//         <div className="hero-testimonial">
-//           <div className="testimonial-box">
-//             <FaQuoteLeft className="quote-icon" />
-//             <p className="testimonial-text">
-//               Attending this church changed my life. The worship, the people, and the presence of God are truly amazing.
-//             </p>
-//             <div className="testimonial-footer">
-//               <img src={avatar} alt="Testimonial" className="testimonial-avatar" />
-//               <div className="testimonial-name">Jane Doe <span>— Church Member</span></div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
