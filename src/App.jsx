@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './Home'
 import BibleVersePopup from './BibleVersePopup'
+import { Routes, Route } from 'react-router-dom';
+import SplineIntro from './SplineIntro'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +13,7 @@ function App() {
   return (
     <>
     <BibleVersePopup />
+    <SplineIntro />
    <Home />
     </>
   )

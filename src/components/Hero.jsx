@@ -13,10 +13,6 @@ const HeroComponent = () => {
   
   return (
     <div className="hero-container">
-  <video autoPlay muted loop playsInline className="hero-video">
-    <source src="https://res.cloudinary.com/ddemtumir/video/upload/v1746650844/video_wdfjue.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
 
       <div className="hero-overlay">
         <motion.div
@@ -38,7 +34,7 @@ const HeroComponent = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            Welcome to Jesus Embassy – RCCG Region 42 HQ
+            Welcome to Jesus Embassy, a church of RCCG
           </motion.h5>
           <motion.p
             initial={{ opacity: 0 }}
