@@ -37,7 +37,8 @@ export default function CoreMessage() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.7, duration: 0.6 }}
                   >
-                    A place where Jesus reigns and destinies are shaped for eternity.
+                    {/* A place where Jesus reigns and destinies are shaped for eternity. */}
+                    Where Brokenness Meets Healing and Lives Are Restored by God’s Word
                   </motion.p>
                   </motion.div>
         <Row>
