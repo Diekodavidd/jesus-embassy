@@ -1,121 +1,126 @@
+.hero-container {
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
 
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
 
-   .hero-container {
-    position: relative;
-    height: 100vh;
-    /* background: url('src/assets/hero.jpg') center center / cover no-repeat; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-  }
-  .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  .btn-container .btn {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 15, 15, 0.425); /* subtle dark overlay */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    padding: 20px;
-  }
-  
+.hero-content {
+  justify-self: center;
+  max-width: 850px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  background: linear-gradient(to right, #f5d06f, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.hero-content h5 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #3d382c;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #363636;
+  line-height: 1.7;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn.gold {
+  background-color: #c19432;
+  color: #0e0e0e;
+}
+
+.btn.light {
+  background-color: #000000;
+  color: #333;
+  border: 1px solid #c19432;
+}
+
+.btn.transparent {
+  background: transparent;
+  border: 1px solid #000000;
+  color: #000000;
+}
+#vax{
+  width: 90%;
+  justify-self: center;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+    font-size: 2.4rem;
   }
-  
+
   .hero-content h5 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    color: #f8e9c0;
-  }
-  
-  .hero-content p {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    color: #eaeaea;
   }
-  
-  .btn-container {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .btn-container .btn {
-    padding: 0.75rem 1.5rem;
+
+  .hero-content p {
     font-size: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
   }
-  
-  .btn-container .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+
+  .btn-container {
+    flex-direction: column;
+    gap: 0.8rem;
   }
-  
-  /* Custom button styles (optional) */
-  #cax {
-    background-color: #c19432;
-    border: none;
-  }
-  
-  #haz {
-    background-color: #ffffff;
-    color: #333;
-    border: none;
-  }
-  
-  #haz:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2.2rem;
-    }
-  
-    .hero-content h5 {
-      font-size: 1.2rem;
-    }
-  
-    .hero-content p {
-      font-size: 1rem;
-    }
-  
-    .btn-container {
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-  }
-  
+}

@@ -1,95 +1,65 @@
-import React from 'react';
-import './ChurchFooterSection.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Facebook, Twitter, Instagram, Youtube } from 'react-bootstrap-icons';
+import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-const ChurchFooterSection = () => {
+export default function Footer() {
   return (
-    <div className="footer-section">
-      {/* CTA */}
-      <motion.div
-        className="cta-container text-center"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        id="contact"
-      >
-        <h2 className="cta-title">Partner with Heaven</h2>
-        <p className="cta-text">
-          Join us in our journey to fulfill God’s will on earth.<br />
-          Together, we can make a difference in our community.
+    <footer className="footer bg-dark text-white pt-5 pb-3 mt-5">
+      <Container>
+        <Row className="gy-4">
+          <Col md={4}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="fw-bold mb-3 text-gold">Jesus Embassy</h4>
+              <p className="small">
+                Raising a people of power and purpose through the unchanging gospel of Jesus Christ. You belong here.
+              </p>
+            </motion.div>
+          </Col>
+
+          <Col md={4}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h5 className="fw-bold mb-3 text-white">Quick Links</h5>
+              <ul className="list-unstyled small">
+                <li><a href="#about" className="footer-link">About Us</a></li>
+                <li><a href="#services" className="footer-link">Our Services</a></li>
+                <li><a href="#events" className="footer-link">Upcoming Events</a></li>
+                <li><a href="#contact" className="footer-link">Contact Us</a></li>
+              </ul>
+            </motion.div>
+          </Col>
+
+          <Col md={4}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h5 className="fw-bold mb-3 text-white">Stay Connected</h5>
+              <p className="small mb-1"><i className="bi bi-envelope-fill me-2"></i> info@jesusembassy.org</p>
+              <p className="small mb-3"><i className="bi bi-telephone-fill me-2"></i> +234 801 234 5678</p>
+              <div className="d-flex gap-3 fs-5">
+                <a href="#" className="footer-social"><i className="bi bi-facebook"></i></a>
+                <a href="#" className="footer-social"><i className="bi bi-instagram"></i></a>
+                <a href="#" className="footer-social"><i className="bi bi-youtube"></i></a>
+              </div>
+            </motion.div>
+          </Col>
+        </Row>
+        <hr className="border-secondary mt-4" />
+        <p className="text-center small text-muted mb-0">
+          &copy; {new Date().getFullYear()} Jesus Embassy. Built to glorify God.
         </p>
-        <Button className="cta-button">Get Involved</Button>
-      </motion.div>
-
-      {/* Footer Info */}
-      <footer className="footer-info">
-        <Container>
-        <Row className="footer-main gx-5 gy-4 text-center text-md-start">
-  {/* 1. Church Info */}
-  <Col md={3}>
-    <h5>Jesus Embassy</h5>
-    <p>1234 Example Street<br />City, State 12245</p>
-  </Col>
-
-  {/* 2. Service Times */}
-  <Col md={3}>
-    <h5>Service Times</h5>
-    <p>Sundays: 9:00 AM & 11:00 AM</p>
-    <p>Wednesdays: 7:00 PM</p>
-    <p>Fridays: 10:00 PM</p>
-  </Col>
-
-  {/* 3. Contact Info */}
-  <Col md={3}>
-    <h5>Contact</h5>
-    <p>Call: (123) 456-7930</p>
-    <p>Email: info@jesusembassy.org</p>
-  </Col>
-
-  {/* 4. Prayer Form */}
-  <Col md={3}>
-    <h5>Prayer Request</h5>
-    <form>
-      <input type="text" placeholder="Name" className="footer-input" />
-      <textarea placeholder="Prayer" rows="2" className="footer-input" />
-      <Button type="submit" className="footer-submit mt-2">Send</Button>
-    </form>
-  </Col>
-</Row>
-
-<hr className="footer-divider" />
-
-{/* 5. Map and Socials Row */}
-<Row className="align-items-center text-center text-md-start mt-4">
-  <Col md={6}>
-    <iframe
-      title="church-location"
-      src="https://www.google.com/maps/embed?pb=..."
-      width="100%"
-      height="150"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      className="rounded shadow-sm"
-    ></iframe>
-  </Col>
-  <Col md={6} className="footer-social text-md-end mt-3 mt-md-0">
-    <a href="#"><Facebook className="social-icon" /></a>
-    <a href="#"><Twitter className="social-icon" /></a>
-    <a href="#"><Instagram className="social-icon" /></a>
-    <a href="#"><Youtube className="social-icon" /></a>
-  </Col>
-</Row>
-
-<p className="footer-copy mt-4 text-center">&copy; 2025 Jesus Embassy. All rights reserved.</p>
-
-        </Container>
-      </footer>
-    </div>
+      </Container>
+    </footer>
   );
-};
-
-export default ChurchFooterSection;
+}

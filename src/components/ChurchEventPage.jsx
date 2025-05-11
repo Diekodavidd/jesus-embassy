@@ -47,8 +47,41 @@ const ChurchEventPage = () => {
             </div>
           </motion.div>
 
-          {/* Partner Block */}
           <motion.div
+            className="col-md-6"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div id="events" className="event-block p-4 glowing-border">
+              <div className="event-header d-flex align-items-center mb-3">
+                <Calendar className="calendar-icon me-2" />
+                <span className="event-label">UPCOMING EVENTS</span>
+              </div>
+              <h2 className="event-title mb-2">Holy Ghost Night</h2>
+              <p className="event-date">May 26, 2025 – 6:00 PM</p>
+
+              {/* Countdown */}
+              <div id="give" className="countdown-wrapper">
+                <span className="countdown-title">Time Remaining:</span>
+                <Countdown
+                  date={eventDate}
+                  renderer={({ days, hours, minutes, seconds }) => (
+                    <div className="countdown-values">
+                      <span>{days}d</span> : <span>{hours}h</span> : <span>{minutes}m</span> : <span>{seconds}s</span>
+                    </div>
+                  )}
+                />
+                {/* <Countdown targetDate="2024-06-15T18:00:00" /> */}
+              </div>
+
+              <p className="scripture-tag">“When the Spirit comes, there is liberty.” – 2 Cor. 3:17</p>
+            </div>
+          </motion.div>
+
+          {/* Partner Block */}
+          {/* <motion.div
             className="col-md-6"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +97,7 @@ const ChurchEventPage = () => {
               </p>
               <Button className="give-button px-4 py-2">Give Now</Button>
             </div>
-          </motion.div>
+          </motion.div> */}
         </Row>
       </Container>
     </div>

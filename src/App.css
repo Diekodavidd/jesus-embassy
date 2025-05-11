@@ -1,0 +1,14 @@
+/* In App.css or index.css */
+.core-message h4, 
+.get-involved h5 {
+  color: #5a0a0a;
+}
+
+.life-section img {
+  height: 300px;
+  object-fit: cover;
+}
+
+blockquote {
+  color: #333;
+}

@@ -1,142 +1,98 @@
+/* General Layout */
+section {
+  padding: 4rem 1rem;
+  background: #fdfaf5;
+  font-family: 'Georgia', serif;
+}
 
-
-  
- 
-  
-  .hero-section {
-    text-align: left;
-    padding: 2rem 0;
-  }
-  
-  .text-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #eee;
-  }
-  .hawe{
-    display: block;
-  }
-  .mission-text {
-    max-width: 500px;
-    margin-top: 0.5rem;
-    height: 300px;
-  }
-  
-  .hawe p{
-    
-    font-size: 2rem;
-    line-height: 1.8;
-  }
-  .hawe h1{
-    font-size: 65px;
-    font-size: 600;
-    font-weight: bold;
-    color: #1e1e1e;
-  }
-  .church-icon {
-    width: 300px;
-    height: auto;
-  }
-  .church-icon img{
-    width: 100%;
-  }
-  .pastor-text{
-    height: 300px;
-    /* font-size: 1rem; */
-    /* max-width: 500px; */
-    line-height: 1.8;
-    margin-top: 0.5rem;
-  }
-  
-  .pastor-section {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #eee;
-  }
-  
-  /* .pastor-image {
-    width: 550px;
-    height: 400px;
-    border-radius: 1rem;
-    border: 1px solid #ddd;
-  } */
-  
-  .pastor-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #c19432;
-  }
-  
-  .pastor-description {
-    font-size: 1.5rem;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #555;
-    line-height: 1.8;
-  }
-  /* Layout improvements */
+/* Mission Section */
 .text-section {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
 }
 
 .text-section h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #c19432;
+  margin-bottom: 1rem;
 }
 
 .mission-text {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #555;
+  font-size: 1.2rem;
   line-height: 1.8;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.church-icon {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
 
-
-/* Pastor section */
+/* Pastor Section */
 .pastor-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
+  align-items: center;
   background-color: #f8f4ee;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 3rem 2rem;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .pastor-image {
-  width: 250px;
+  width: 280px;
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #c19432;
+  border: 5px solid #c19432;
 }
 
+.pastor-text {
+  max-width: 600px;
+  text-align: center;
+}
 
+.pastor-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c19432;
+  margin-bottom: 1rem;
+}
 
-/* Card grid */
+.pastor-description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Cards Grid */
 .who-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 1rem;
 }
 
-
+.card {
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
 
 .card:hover {
   transform: translateY(-5px);
@@ -144,6 +100,7 @@
 
 .card-top,
 .card-topp {
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,6 +110,12 @@
   background: linear-gradient(to right, #c19432, #e3c77c);
   color: white;
   font-size: 2rem;
+  width: 100%;
+}
+
+.icon {
+  font-size: 60px;
+  color: white;
 }
 
 .card-topp img {
@@ -162,17 +125,34 @@
 }
 
 .card-bottom {
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
 .card-bottom h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .card-bottom span {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #c19432;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pastor-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+#jax , #max{
+  width:45%;
 }

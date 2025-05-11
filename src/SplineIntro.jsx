@@ -11,7 +11,7 @@ export default function Home() {
   };
 
   return (
-    <main style={{ width: '100vw', height: '100vh' }}>
+    <main style={{ width: '98vw', height: '100vh' }}>
       <Spline
         scene="https://prod.spline.design/8yCH-5vnBD6QbNGS/scene.splinecode"
         onMouseDown={handleMouseDown}

@@ -1,22 +1,23 @@
 import React from 'react';
-import './Hero.css'; // Your custom styles
+import './Hero.css';
 import { motion } from 'framer-motion';
-import das from '../assets/video.mp4'
+import heroVideo from '../assets/video.mp4'; // local video fallback
 
 const HeroComponent = () => {
-  const heroStyle = {
-    backgroundImage:  `url(https://res.cloudinary.com/ddemtumir/video/upload/v1746650844/video_wdfjue.mp4)`,
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-  };
-  
   return (
     <div className="hero-container">
+      <video
+        className="hero-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="https://res.cloudinary.com/ddemtumir/video/upload/v1746650844/video_wdfjue.mp4"
+        type="video/mp4"
+      />
 
       <div className="hero-overlay">
         <motion.div
-        id='home'
           className="hero-content"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,14 +28,14 @@ const HeroComponent = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Encounter God. Embrace Purpose. Empower the World.
+            Encounter God. <br /> Embrace Purpose. <br /> Empower the World.
           </motion.h1>
           <motion.h5
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            Welcome to Jesus Embassy, a church of RCCG
+            Welcome to <span>Jesus Embassy</span> – A Church of RCCG
           </motion.h5>
           <motion.p
             initial={{ opacity: 0 }}
@@ -49,9 +50,9 @@ const HeroComponent = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
           >
-            <button className="btn btn-primary" id='cax'>Visit Us This Sunday</button>
-            <button className="btn btn-secondary" id='haz'>Experience the Word</button>
-            <button className="btn btn-dark">Join a Small Group</button>
+            <button className="btn gold">Visit Us This Sunday</button>
+            <button className="btn light">Experience the Word</button>
+            <button className="btn transparent">Join a Small Group</button>
           </motion.div>
         </motion.div>
       </div>
@@ -60,4 +61,3 @@ const HeroComponent = () => {
 };
 
 export default HeroComponent;
-

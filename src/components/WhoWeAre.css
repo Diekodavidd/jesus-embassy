@@ -1,4 +1,4 @@
-.who-we-are-section {
+/* .who-we-are-section {
     padding: 4rem 1rem;
     background: #fdfcf9;
     font-family: 'Georgia', serif;
@@ -147,7 +147,6 @@
     color: #c19432;
     margin: 0 0.5rem;
   }
-/* Base section styles */
 .who-we-are-section {
   position: relative;
   overflow: hidden;
@@ -157,7 +156,6 @@
   z-index: 1;
 }
 
-/* Floating Verse Background Container */
 .floating-verses {
   position: absolute;
   top: 0;
@@ -171,14 +169,14 @@
 
 .who-banner {
   position: relative;
-  z-index: 2; /* Ensure main text appears on top */
+  z-index: 2; 
 }
 
 
 .floating-verse {
   position: absolute;
   background: linear-gradient(90deg, #33285f, #d89b54);
-   color: rgb(255, 255, 255); /* Increase base visibility */
+   color: rgb(255, 255, 255); 
   font-size: 1.8rem;
   font-weight: 600;
   animation: floatVerse 20s linear infinite;
@@ -186,7 +184,6 @@
   user-select: none;
 }
 
-/* Verse Animation */
 @keyframes floatVerse {
   0% {
     transform: translateY(100%) rotate(0deg);
@@ -204,4 +201,108 @@
   }
 }
 
+   */
+
+   .who-we-are-section {
+    position: relative;
+    overflow: hidden;
+    /* background: linear-gradient(to right, #fdfaf5, #f8efe3); */
+    padding: 5rem 1.5rem;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .who-banner {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: auto;
+    background: linear-gradient(90deg, #392b70, #d89b54);
+    color: #fff;
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .who-banner h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+  }
+  
+  .who-banner p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+  .verse {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 1.2rem;
+    color: #f4f0e4;
+    letter-spacing: 0.5px;
+  }
+  
+  .verse::before,
+  .verse::after {
+    content: '✦';
+    color: #c19432;
+    margin: 0 0.5rem;
+  }
+  
+  .floating-verses {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .floating-verse {
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #33285f, #d89b54);
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0.2;
+    animation: floatVerse 22s linear infinite;
+    text-shadow: 0 0 10px rgba(193, 148, 50, 0.5);
+  }
+  
+  @keyframes floatVerse {
+    0% {
+      transform: translateY(150%) rotate(0deg);
+      opacity: 0.15;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateY(-200%) rotate(4deg);
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .who-banner h2 {
+      font-size: 2rem;
+    }
+    .who-banner p {
+      font-size: 1rem;
+    }
+    .floating-verse {
+      font-size: 1.2rem;
+    }
+  }
   
