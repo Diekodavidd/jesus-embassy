@@ -30,7 +30,6 @@ export default function GetInvolved() {
               </motion.div>
         <Row>
             
-      <h2 className="fw-bold mb-4">Get Involved</h2>
           {actions.map((act, i) => (
             <Col md={4} key={i}>
               <motion.div
@@ -46,6 +45,9 @@ export default function GetInvolved() {
               </motion.div>
             </Col>
           ))}
+
+          
+      <h2 className="fw-bold mb-4 mt-5">Get Involved Now!!!</h2>
         </Row>
       </Container>
     </section>
